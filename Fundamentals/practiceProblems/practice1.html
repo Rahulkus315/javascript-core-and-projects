@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+    <h2>Live Digital Clock</h2>
+    <h1 id="clock"></h1>
+    <script>
+        setInterval(function(){
+            let now = new Date().toLocaleTimeString()
+            document.getElementById("clock").innerText = now + " "+ "AM" 
+            console.log(now)
+        },1000)
+    </script>
+
+-->
+
+<h2>Auto Counter</h2>
+<h2 id="number">0</h2>
+<button onclick="startcounter()">Start</button>
+<button onclick="stopCounter()">Stop</button>
+
+<script>
+    let count = 0;
+    let Interval;
+    function startcounter(){
+        Interval = setInterval(function(){
+            count++;
+            document.getElementById("number").innerText = count
+        }, 1000)
+    }
+    function stopCounter(){
+        clearInterval(Interval)
+    }
+</script>
+</body>
+</html>
